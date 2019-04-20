@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Golestan.Controller.TeacherSetSeeUnitController">
+   <children>
+      <TableView fx:id="lessonsTable" layoutX="21.0" layoutY="325.0" onMouseClicked="#seeStudentsOfThis" prefHeight="242.0" prefWidth="408.0">
+         <columns>
+            <TableColumn fx:id="lessonCol" minWidth="20.0" prefWidth="75.0" text="Lesson" />
+            <TableColumn fx:id="teacherCol" minWidth="20.0" prefWidth="70.0" text="teacher" />
+            <TableColumn fx:id="dayCol" minWidth="20.0" prefWidth="70.0" text="day" />
+            <TableColumn fx:id="dateCol" minWidth="20.0" prefWidth="60.0" text="date" />
+            <TableColumn fx:id="unitsCol" minWidth="20.0" prefWidth="60.0" text="units" />
+            <TableColumn fx:id="capacityCol" minWidth="20.0" prefWidth="74.0" text="capacity" />
+         </columns>
+      </TableView>
+      <HBox layoutX="60.0" layoutY="26.0" prefHeight="43.0" prefWidth="315.0" spacing="10.0">
+         <children>
+            <ChoiceBox fx:id="dayChoiceBox" prefHeight="31.0" prefWidth="92.0" />
+            <ChoiceBox fx:id="dateChoiceBox" layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="92.0" />
+            <ChoiceBox fx:id="classNameChoiceBox" layoutX="112.0" layoutY="10.0" prefHeight="31.0" prefWidth="112.0" />
+         </children>
+      </HBox>
+      <VBox layoutX="161.0" layoutY="80.0" prefHeight="74.0" prefWidth="100.0" spacing="10.0">
+         <children>
+            <TextField fx:id="unitsField" />
+            <TextField fx:id="capacityField" layoutX="10.0" layoutY="10.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="54.0" layoutY="85.0" prefHeight="64.0" prefWidth="84.0" spacing="20.0">
+         <children>
+            <Label fx:id="unitText" text="units :" />
+            <Label fx:id="capacityText" layoutX="10.0" layoutY="10.0" text="capacity :" />
+         </children>
+      </VBox>
+      <Button fx:id="setButtonID" layoutX="325.0" layoutY="102.0" mnemonicParsing="false" onAction="#setClass" prefHeight="31.0" prefWidth="62.0" text="set" />
+      <Button layoutX="356.0" layoutY="166.0" mnemonicParsing="false" onAction="#back" prefHeight="37.0" prefWidth="46.0">
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Resource/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
