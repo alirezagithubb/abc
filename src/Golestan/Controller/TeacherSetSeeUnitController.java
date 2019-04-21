@@ -3,6 +3,7 @@ package Golestan.Controller;
 import Golestan.Main;
 import Golestan.Model.Book;
 import Golestan.Model.Lesson;
+import Golestan.Model.Student;
 import Golestan.Model.Teacher;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -83,6 +84,9 @@ public class TeacherSetSeeUnitController {
                 dateChoiceBox.getSelectionModel().getSelectedItem(), Teacher.teacher.username,
                 capacityField.getText()));
         lessonsTable.setItems(Lesson.lessons);
+        for (int i = 0; i < Student.students.size(); i++) {
+            Student.students.get(i).unitCondition.add(false);
+        }
 
         ItemsAreOk = false;
     }
@@ -113,11 +117,15 @@ public class TeacherSetSeeUnitController {
         return;
     }
 
-    public void seeStudentsOfThis(MouseEvent mouseEvent) {
+    public void seeStudentsOfThisUnit(MouseEvent mouseEvent) throws IOException {
         if(!Teacher.teacher.seeUnits){
             return;
         }
         Lesson temp = lessonsTable.getSelectionModel().getSelectedItem();
-
+        int index = Lesson.lessons.indexOf(temp);
+        Lesson.index = index;
+        Parent root = FXMLLoader.load(getClass().getResource("../View/StudentsOfUnit.fxml"));
+        Main.ps.setScene(new Scene(root));
+        return;
     }
 }

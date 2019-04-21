@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Golestan.Controller.TeacherSetSeeUnitController">
    <children>
-      <TableView fx:id="lessonsTable" layoutX="21.0" layoutY="325.0" onMouseClicked="#seeStudentsOfThis" prefHeight="242.0" prefWidth="408.0">
+      <TableView fx:id="lessonsTable" layoutX="21.0" layoutY="325.0" onMouseClicked="#seeStudentsOfThisUnit" prefHeight="242.0" prefWidth="408.0">
          <columns>
             <TableColumn fx:id="lessonCol" minWidth="20.0" prefWidth="75.0" text="Lesson" />
             <TableColumn fx:id="teacherCol" minWidth="20.0" prefWidth="70.0" text="teacher" />

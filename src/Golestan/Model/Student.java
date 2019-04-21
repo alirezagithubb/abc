@@ -4,11 +4,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
 
 public class Student {
 
     public ObservableList<Book> borrowedBooks = FXCollections.observableArrayList();
-    public ObservableList<Book> lessonsChoiced = FXCollections.observableArrayList();
+    public ObservableList<Lesson> lessonsChoiced = FXCollections.observableArrayList();
+    public ArrayList<String> marks = new ArrayList<>();
+    public ArrayList<Boolean> unitCondition = new ArrayList<>();
 
     public boolean[][] diningChoiceBox = new boolean[5][2];
     public static Student student = null;
@@ -20,6 +24,17 @@ public class Student {
     public String creditNumber = "";
     public String creditPass = "";
     public Integer average = 20;
+
+
+    @Override
+    public String toString() {
+        if(marks.get(Lesson.index) != "-1") {
+            return username + "   " + marks.get(Lesson.index);
+        }
+        else{
+            return username + "   " + "No Mark Entered";
+        }
+    }
 
     public Student(String username, String password) {
         this.username = username;

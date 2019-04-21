@@ -3,9 +3,13 @@ package Golestan.Model;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.ArrayList;
+
 public class Lesson {
 
     public static ObservableList<Lesson> lessons = FXCollections.observableArrayList();
+    public ObservableList<String> students = FXCollections.observableArrayList();
+    public static int index;
 
     public String name;
     public String numberOfUnits;
@@ -13,6 +17,7 @@ public class Lesson {
     public String date;
     public String teacherName;
     public String capacity;
+    public String condition;
 
     public Lesson(String name, String numbrOfUnits, String day, String date, String teacherName , String capacity) {
         this.name = name;

@@ -32,17 +32,13 @@ public class StudentLibraryContoller {
         int index = Book.books.indexOf(temp);
         Book selectedBook = Book.books.get(index);
         if(selectedBook.condition.equals("NOT BORROWED")){
-            System.out.println("hello");
             Book.books.get(index).condition = "BORROWED";
-            System.out.println(Book.books.get(index).condition);
             Book.borrowedBooks.add(selectedBook);
             Student.student.borrowedBooks.add(selectedBook);
             Student.student.numberOfBorrowedBooks++;
             conditionCol.setCellValueFactory(new PropertyValueFactory<>("condition"));
             bookTable.setItems(Book.books);
             conditionCol.setCellValueFactory(new PropertyValueFactory<>("condition"));
-            System.out.println(Book.books.get(0).condition);
-            System.out.println(Book.books.get(index).condition);
 
         }
         else{
