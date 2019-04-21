@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Golestan.Controller.StudentChooseUnitController">
+   <children>
+      <TableView fx:id="conditionTable" layoutX="12.0" layoutY="309.0" onMouseClicked="#seeStudentsOfThis" prefHeight="282.0" prefWidth="426.0">
+         <columns>
+            <TableColumn fx:id="lessonCol" minWidth="20.0" prefWidth="66.0" text="Lesson" />
+            <TableColumn fx:id="teacherCol" minWidth="20.0" prefWidth="84.0" text="teacher" />
+            <TableColumn fx:id="dayCol" minWidth="20.0" prefWidth="59.0" text="day" />
+            <TableColumn fx:id="dateCol" minWidth="20.0" prefWidth="69.0" text="date" />
+            <TableColumn fx:id="unitsCol" minWidth="17.0" prefWidth="32.0" text="units" />
+            <TableColumn fx:id="capacityCol" minWidth="20.0" prefWidth="37.0" text="capacity" />
+            <TableColumn fx:id="capacityCol1" minWidth="20.0" prefWidth="78.0" text="condition" />
+         </columns>
+      </TableView>
+      <Button layoutX="341.0" layoutY="22.0" mnemonicParsing="false" onAction="#back">
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Resource/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Golestan.Controller.adminLibraryController">
+    <children>
+        <VBox layoutX="209.0" layoutY="54.0" prefHeight="137.0" prefWidth="177.0" spacing="20.0">
+            <children>
+                <TextField fx:id="nameField" />
+                <TextField fx:id="authorField" />
+                <TextField fx:id="publisherField" />
+            </children>
+        </VBox>
+        <VBox layoutX="52.0" layoutY="53.0" prefHeight="129.0" prefWidth="100.0" spacing="20.0">
+            <children>
+                <Label text="name :">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+                <Label layoutX="10.0" layoutY="10.0" text="author :">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+                <Label layoutX="10.0" layoutY="31.0" text="publisher :">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <Button layoutX="307.0" layoutY="210.0" mnemonicParsing="false" onAction="#addBook" text="addBook" />
+      <TableView fx:id="bookTable" layoutX="20.0" layoutY="306.0" prefHeight="270.0" prefWidth="410.0">
+         <columns>
+            <TableColumn fx:id="nameCol" minWidth="25.0" prefWidth="102.0" text="name" />
+            <TableColumn fx:id="authorCol" minWidth="25.0" prefWidth="102.0" text="author" />
+            <TableColumn fx:id="publisherCol" minWidth="25.0" prefWidth="102.0" text="publisher" />
+            <TableColumn fx:id="conditionCol" minWidth="25.0" prefWidth="102.0" text="condition" />
+         </columns>
+      </TableView>
+      <Button layoutX="125.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" prefHeight="22.0" prefWidth="36.0">
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Resource/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+    </children>
+</AnchorPane>

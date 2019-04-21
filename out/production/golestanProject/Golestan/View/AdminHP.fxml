@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Golestan.Controller.AdminHomePageController">
+    <children>
+        <Label layoutX="190.0" layoutY="24.0" prefHeight="69.0" prefWidth="101.0" text="profile" AnchorPane.bottomAnchor="507.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="189.0" AnchorPane.topAnchor="24.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="27.0" layoutY="81.0" prefHeight="89.0" prefWidth="132.0" text="Username :">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="34.0" layoutY="150.0" prefHeight="69.0" prefWidth="141.0" text="password :">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Text fx:id="userNameText" layoutX="192.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="69.6708984375" />
+        <Text fx:id="passwordText" layoutX="192.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="69.6708984375" />
+        <Button layoutX="188.0" layoutY="228.0" mnemonicParsing="false" onAction="#changePassword" text="changePassword" />
+        <Button layoutX="33.0" layoutY="228.0" mnemonicParsing="false" onAction="#changeUsername" text="changeUsername" />
+        <TextField fx:id="changeUsernameField" layoutX="66.0" layoutY="285.0" prefHeight="31.0" prefWidth="155.0" visible="false" />
+        <TextField fx:id="changePasswordField" layoutX="250.0" layoutY="285.0" prefHeight="31.0" prefWidth="155.0" visible="false" />
+        <Button layoutX="340.0" layoutY="110.0" mnemonicParsing="false" onAction="#changeUser" text="change" />
+        <Button layoutX="340.0" layoutY="169.0" mnemonicParsing="false" onAction="#changePass" text="change" />
+        <HBox layoutX="82.0" layoutY="362.0" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#diningSelected">
+                    <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Resource/dining.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#librarySelected">
+                    <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Resource/library.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </HBox>
+        <HBox layoutX="82.0" layoutY="475.0" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#teacherSelected">
+                    <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Resource/teacher.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#studentSelected">
+                    <graphic>
+                        <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../Resource/Student.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </HBox>
+      <Button layoutX="34.0" layoutY="14.0" mnemonicParsing="false" onAction="#logOut">
+         <graphic>
+            <ImageView fitHeight="60.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Resource/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+    </children>
+</AnchorPane>

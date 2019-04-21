@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Golestan.Controller.RLController">
+   <children>
+      <TextField fx:id="usernameId" layoutX="140.0" layoutY="171.0" promptText="username" />
+      <PasswordField fx:id="passId" layoutX="140.0" layoutY="226.0" promptText="password" />
+      <Button layoutX="104.0" layoutY="334.0" mnemonicParsing="false" onAction="#register" prefHeight="31.0" prefWidth="107.0" text="register" />
+      <Button layoutX="256.0" layoutY="334.0" mnemonicParsing="false" onAction="#login" prefHeight="31.0" prefWidth="107.0" text="log in" />
+      <HBox layoutX="82.0" layoutY="415.0" prefHeight="100.0" prefWidth="348.0" spacing="50.0">
+         <children>
+            <RadioButton fx:id="teacherCheck" mnemonicParsing="false" text="teacher" />
+            <RadioButton fx:id="studentCheck" mnemonicParsing="false" text="student" />
+            <RadioButton fx:id="adminCheck" mnemonicParsing="false" text="admin" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
